@@ -1,0 +1,248 @@
+/********************index页面*********************/
+li{list-style: none;}
+.header{
+    z-index: 2;
+    left: 0px;
+    right: 0px; 
+    padding-top: 20px;
+}
+.section{
+    padding: 0;
+}
+.bg_img{
+    min-height: 327px;
+}
+body{
+    background-color: #f3f6fd;
+}
+.txt{
+    margin-top: 38px;
+}
+.headerh2{
+    font-family:'微软雅黑';
+    margin-bottom: 34px;
+}
+.bg_teacher{
+    background-image: url(../images/ex-li1-ico-1.png);
+    width: 34px;
+    height: 33px;
+    display: block;
+}
+.bg_student{
+    background-image: url(../images/ex-li1-ico-2.png);
+    width: 34px;
+    height: 33px;
+    display: block;
+}
+.h2_teacher{
+    display: flex;
+    align-items: center;
+}
+.p_teacher{
+    color: #666;
+}
+.ol_teacehr li{
+    color: #666;
+    margin-bottom: 19px;
+    font-size: 15px;
+}
+.div_teacher{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer {
+    background-color: #25292e;
+}
+.footerh4{
+    color: #fff;
+    margin-top: 23px;
+}
+.footerol {
+    margin-top: 23px;
+}
+.footerol li{
+    color: #777878;
+    margin-bottom: 24px;
+}
+.footerimg{
+    max-width: 150px;
+    margin-top: 26px;
+}
+.record{
+    background-color: #232426;
+}
+.record h5{
+    color: #777878;
+}
+.teacher{
+    margin-bottom: 35px;
+}
+.experience {
+    width: max-content;
+    display: block;
+    margin: 0 auto;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px){
+    .page_teacher {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .h2_teacher {
+        margin-top: 0;
+    }
+    .ol_teacehr li {
+        margin-bottom: 12px;
+    }
+}
+
+
+/********************login页面*********************/
+.headline{
+    display: block;
+    height: 3px;
+    border-radius: 5px;
+    width: 60px;
+    background: #ff662f;
+    margin: 0 auto;
+}
+.title{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+}
+.title h1{
+    color: #fff;
+}
+.title h3{
+    color: #fff;
+}
+.loginWindow{
+    background-image: url(../images/new-sug-box-bg.jpg);
+    background-size: 1171px 301.4px;
+    box-shadow: 0px 4px 28px -6px;
+    margin-top: -55px;
+    border-radius: 5px;
+    margin-bottom: 105px;
+}
+.loginWindow h3 {
+    margin-bottom: 46px;
+    padding-top: 43px;
+}
+.section_middle{
+    background-image: url(../images/new-sug-box-bg.jpg);
+}
+.login_btn{
+    font-size: 18px;
+    color: #fff;
+    background: #ff662f;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+.login_div {
+    margin-top: 38px;
+    padding-bottom: 77px;
+}
+.login_a{
+    line-height: 3;
+    color: darkgray;
+}
+.col-sm-2 label{
+    color: #666;
+    font-weight: normal;
+}
+.qrcode_div {
+    height: 34px;
+    background: #eeebeb;
+    border: 1px solid #d9d9d9;
+    width: 23%;
+}
+.qrcode_div p{
+    color: #666;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+}
+.err{
+    color: red;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px){
+    .login_a {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 767px){
+    .qrcode_div {
+        width: 38%;
+        margin: 21px auto 0;
+    }
+}
+
+/*********************学生端container********************/
+.operation_teacher{
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+    padding-bottom: 20%;
+}
+.nav-stacked>li{
+    margin-bottom: 20px;
+}
+.exam-tab-div2{
+    width: 207px;
+    height: 126px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 3%;
+    /* margin-left: 6%; */
+}
+.exam-tab-div2:hover{
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+}
+.exam-tab-img{
+    width: 38px;
+}
+.exam-fre{
+    display: inline;
+}
+.login-register>a:last-child{
+    margin-left: 12px;
+    padding-right: 13px;
+}
+
+/********************测试页面***************/
+.answer-card{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border: 1px solid;
+    vertical-align: unset;
+    margin-right: 10px;
+}
+.question-num{
+    margin-top: 15px;
+}
+.nav-pills>li>a{
+    cursor: pointer;
+}
+.list-group>a{
+    cursor: pointer;
+}
+.exam-info{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+th,td {
+    border: 1px;
+    border: 1px solid;
+    width: 113px;
+    text-align: center;
+    color: #666;
+}

@@ -1,0 +1,238 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <script type="text/javascript" src="../../../public/static/home/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../../../public/static/home/js/bootstrap.min.js"></script>
+    <link href="../../../public/static/home/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../../public/static/home/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../../public/static/home/css/index.css">
+    <script src="../../../public/static/home/js/jquery.validate.js"></script>
+    <!-- 下面引入的是中文提示包 -->
+    <script src="../../../public/static/home/js/messages_zh.js"></script>
+    <script src="../../../public/static/home/js/additional-methods.js"></script>
+</head>
+
+<body>
+    <div class="section">
+        <div class="header container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class=" navbar navbar-default navbar-fixed-top navbar-inverse">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" style="font-size:xx-large">晨光家电</a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="" style="font-size:large">
+                                        <a href="{:url('home/index')}">首页</a>
+                                    </li>
+                                    <li class="" style="font-size:large">
+                                        <a href="#">热门家电</a>
+                                    </li>
+                                    <li class="" style="font-size:large">
+                                        <a href="#">家电分类</a>
+                                    </li>
+                                    <li class="" style="font-size:large">
+                                        <a href="#">加入我们</a>
+                                    </li>
+                                    <li class="" style="font-size:large">
+                                        <a href="#">关于晨光</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel slide" id="fullcarousel-example" data-interval="false" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="active item">
+                <img src="__STATIC__/home/images/new-sug-banner.jpg" class="bg_img">
+            </div>
+        </div>
+        <div class="section title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 contenteditable="true" class="text-center register-headline"></h1>
+                        <h3 class="text-center">企业销售员管理系统</h3>
+                        <div class="col-md-12">
+                            <span class="headline"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section_middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 "></div>
+                <div class="col-md-8 loginWindow">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10 ">
+                        <h3 class="text-center" contenteditable="true">注册信息</h3>
+                        <form action="{:url('home/registerSave')}" method="POST" class="form-horizontal register-form"
+                            role="form" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <div class="col-sm-2">
+                                    <label class="control-label">姓名*</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="username" name="wk_name" placeholder="真实姓名">
+
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-2">
+                                    <label class="control-label">用户名*</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="username" name="wk_username" placeholder="用户名8-16位">
+                                    <!-- <div class="div1">
+                                        <span style="color: red;">用户名已注册！</span>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-2">
+                                    <label class="control-label">密码*</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="password" name="wk_password" id="password" class="form-control"
+                                        placeholder="密码8-16位">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-2">
+                                    <label class="control-label">确认密码*</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="password" name="repassword" class="form-control" placeholder="请再次输入密码">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-2">
+                                    <label class="control-label">职位*</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <select class="form-control" name="wk_position">
+                                        <option value="售后人员">售后人员</option>
+                                        <option value="销售人员">销售人员</option>
+                                        <option value="部门经理">部门经理</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-2">
+                                    <label class="control-label">部门*</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <select class="form-control" name="wk_branch">
+                                        <option value="电视事业部">电视事业部</option>
+                                        <option value="电脑事业部">电脑事业部</option>
+                                        <option value="洗衣机事业部">洗衣机事业部</option>
+                                        <option value="空调事业部">空调事业部</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-2">
+                                    <label class="control-label">选一个头像图片*</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="file" name="wk_head_image" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group login_div">
+                                <div class="col-sm-3 text-left">
+                                    <a href="{:url('home/login')}" class="login_a">已有账号，登陆</a>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input class="btn btn-block login_btn" type="submit" value="注册">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 数据格式正确弹框提示用户
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel"> 提示框</h4>
+                </div>
+                <div class="modal-body">恭喜您注册成功！</div>
+                <div class="modal-footer">
+                    <a href="operation_student.html" class="btn btn-primary confirm">确定</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="section footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <h4 class="footerh4">联系我们</h4>
+                    <ol class="list-unstyled footerol">
+                        <li>公司地址：青岛大学×××××</li>
+                        <li>联系电话：888-888-8888</li>
+                        <li>联系邮箱：15666795711@163.com</li>
+                    </ol>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <h4 class="footerh4">线下销售</h4>
+                    <ol class="list-unstyled footerol">
+                        <li><a href="#">自营实体店</a></li>
+                        <li><a href="#">代理/加盟店</a></li>
+                        <li><a href="#">分销商</a></li>
+                    </ol>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <h4 class="footerh4">线上销售</h4>
+                    <ol class="list-unstyled footerol">
+                        <li><a href="#">官方商城</a></li>
+                        <li><a href="#">天猫旗舰店</a></li>
+                        <li><a href="#">京东官方旗舰店</a></li>
+                    </ol>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <img src="__STATIC__/home/images/qrcode2.png" class="img-responsive img-rounded footerimg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section record">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h5 contenteditable="true" class="text-center">Copyright ©2013-2018 版权所有青岛大学TheBest团队鲁ICP备17054505号</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="../../../public/static/home/js/index.js"></script>
+    <script src="../../../public/static/home/js/register.js"></script> -->
+</body>
+
+</html>

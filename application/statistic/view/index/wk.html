@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+
+    <style>
+        a{
+            text-decoration: none;
+        }
+        table,tr,th,td{
+            border-color: #eeeeee;
+        }
+        table{
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        th{
+            font-size: 14px;
+        }
+        th a{
+            line-height: 24px;
+        }
+        td{
+            font-size: 12px;
+            line-height: 20px;
+        }
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .container a{
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            padding: 0 20px;
+            line-height: 30px;
+            background-color: #999999;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+
+    <p id="id1"></p>
+    <table  id="tbl" border="1" cellspacing="0" class="table ">
+        <thead>
+            <tr>
+                <th><a href="{:url('by_or_pro_id')}"> or_pro_id</a></td>
+                <th><a href="{:url('by_or_user_id')}"> or_user_id</a></td>
+                <th><a href="{:url('by_or_wk_id')}"> or_wk_id</a></td>
+                <th colspan="2"><a href="{:url('by_or_buy_time')}"> or_buy_time</a></td>
+                <th><a href="{:url('by_or_number')}"> or_number</a></td>
+                <th><a href="{:url('by_or_price')}"> or_price</a></td>
+                <th><a href="{:url('by_count')}"> count</a></td>
+
+
+
+
+            </tr>
+        </thead>
+
+
+        <tbody>
+            {volist name="select" id="select"}
+        
+            <tr>
+
+                
+            <td  class="table1"></td>
+                <td class="table1"></td>
+                <td  class="table1">{$select.or_wk_id}</td>
+                <td class="table1"></td>
+                <td class="table1"></td>
+                <td class="table1"></td>
+                <td class="table1"></td>
+                <td class="table1">{$select.sum}</td>
+            </tr>{/volist}
+        </tbody>
+
+
+
+
+
+    </table>
+
+    </form>
+
+    <table>
+        <tr>
+            <td>
+                <form action="{:url('bt_time')} " method="POST">
+                    <input type="text" name="table1" id="table1" class="table1">
+                    <input type="text" name="table2" id="table2" class="table2">
+                    <button type="submit">by_time</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="{:url('bt_or_id')} " method="POST">
+                    <input type="text" name="table1" id="table1" class="table1">
+                    <input type="text" name="table2" id="table2" class="table2">
+                    <button type="submit">by_or_id</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+                <td>
+                    <form action="{:url('count_sum')} " method="POST">
+                        <input type="text" name="table1" id="table1" class="table1">
+                        <input type="text" name="table2" id="table2" class="table2">
+                        <button type="submit">count</button>
+                    </form>
+                </td>
+            </tr>
+
+
+    </table>
+
+    <!-- <form action="{:url('by_count')} " method="POST" >
+        <input type="text" name="table1" id="table1" class="table1">
+        <input type="text" name="table2" id="table2" class="table2">
+        <button type="submit">submit</button>
+    </form> -->
+    <div class="container">
+        <a class="jump" href="{:url('to_productions')}">go and see the productions</a>
+        <a href="{:url('/tongji/Index')}">go and see the chart</a>
+    </div>
+    
+
+
+
+    <script type="text/javascript">
+
+        window.onload = function () {
+    
+          var tbl = document.getElementById("tbl");      //首先获取表格
+    
+          var rows = tbl.getElementsByTagName("tr");     //获取行
+    
+          for (i = 0; i <  rows.length; i++) {       
+              if(i>0&&i<3) rows[i].style.color="red";
+              else if(i>2 && i < 5 ) rows[i].style.backgroundColor="green";
+              else if(i>4 &&i <7) rows[i].style.backgroundColor="orange";
+                else if(i>6) rows[i].style.backgroundColor="pink";
+
+                          //进行循环操作，最终值小于tr的行数
+    
+            // var j = parseInt(i / 3); // 此语句的效果是,以3个为单位,000 111 222 333 444 ...  
+    
+            // if (j % 2 == 0) rows[i].style.backgroundColor = "#f00";     //如果是偶数则为红色
+    
+            // else rows[i].style.backgroundColor = "#0f0";  	//如果是奇数则为绿色
+    
+          }
+    
+        };
+    
+      </script>
+</body>
+
+</html>

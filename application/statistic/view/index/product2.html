@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        a{
+            text-decoration: none;
+        }
+        table,tr,th,td{
+            border-color: #eeeeee;
+        }
+        table {
+            width: 1200px;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        th {
+            font-size: 14px;
+            width: 600px;
+        }
+
+        th a {
+            line-height: 24px;
+        }
+
+        td {
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .container a{
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            padding: 0 20px;
+            line-height: 30px;
+            background-color: #999999;
+        }
+    </style>
+</head>
+
+<body>
+
+        <div class="container">
+                <a href="{:url('tbs')}">the top five popular</a>
+                <a href="{:url('tls')}">the last five popular</a>
+                <a href="{:url('tlw')}">the top five worst</a>
+                <a href="{:url('tws')}">the top five qualiity</a>
+            </div>
+
+
+    <table border="1" cellspacing="0" class="table ">
+        <thead>
+            <tr>
+                <th>the top five qualiity</th>
+                <th>the number it bad</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            {volist name="select" id="select"}
+
+            <tr>
+
+
+                <td  class="table1"> {$select.pro_id}</td>
+                <td class="table1">{$select.bad_cou}</td>
+            </tr>{/volist}
+        </tbody>
+
+
+
+
+
+    </table>
+    <div class="container"><a href="{:url('index')}">back</a></div>
+</body>
+
+</html>

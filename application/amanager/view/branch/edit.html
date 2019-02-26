@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="__STATIC__/index/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>售后人员列表</h2>
+        <hr>
+        <form action="{:url('Branch/update')}" method="post">
+
+            <table class="table table-striped table-bordered table-hover table-condensed">
+
+                <tr>
+                    <td>部门名称</td>
+                    <td><input value="{$data.br_name}" name="br_name" type="text" placeholder="员工ID" required="required"></td>
+                </tr>
+                <tr>
+                    <td>部门产品一</td>
+                    <td><input value="{$data.br_production1}" name="br_production1" type="text" placeholder="员工姓名" required="required"></td>
+                </tr>
+                <tr>
+                    <td>部门产品二</td>
+                    <td><input value="{$data.br_production2}" name="br_production2" type="text" placeholder="账号头像" required="required"></td>
+                </tr>
+                <tr>
+                    <td>部门产品三</td>
+                    <td><input value="{$data.br_production3}" name="br_production3" type="text" placeholder="职位" required="required"></td>
+                </tr>
+                <tr>
+                    <td>部门信息</td>
+                    <td><input value="{$data.br_info}" name="br_info" type="text" placeholder="所属部门" required="required"></td>
+                </tr>
+                
+                <tr>
+                    <td><input data-icon="plus" type="submit" value="提交"></td>
+                </tr>
+            </table>
+
+        </form>
+
+    </div>
+
+    <script src="__STATIC__/index/js/jquery.js"></script>
+    <script src="__STATIC__/index/js/bootstrap.min.js"></script>
+</body>
+
+</html>

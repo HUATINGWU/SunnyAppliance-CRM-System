@@ -1,0 +1,10 @@
+.header{
+    position: fixed;
+    z-index: 2;
+    left: 0px;
+    right: 0px;
+    padding-top: 20px;
+}
+.section{
+    padding: 0;
+}

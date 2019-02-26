@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="__STATIC__/index/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>客户列表</h2>
+        <hr>
+        
+        <table class="table table-striped table-bordered table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th>客户ID</th>
+                    <th>客户用户名</th>
+                    <th>客户密码</th>
+                    <th>客户头像</th>
+                    <th>客户电话</th>
+                    <th>客户类型</th>
+                    <th>客户联系人1</th>
+                    <th>客户联系人2</th>
+                    <th>客户联系人3</th>
+                    <th>客户地址</th>
+                    <th>客户等级</th>
+                    <th>客户状态</th>
+                    <th>最近登录IP</th>
+                    <th>最近登录时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                {volist name="data" id="vo"}
+                <tr>
+                    <td>{$vo.user_id}</td>
+                    <td>{$vo.user_name}</td>
+                    <td>{$vo.user_password}</td>
+                    <td>{$vo.user_head_image}</td>
+                    <td>{$vo.user_phone}</td>
+                    <td>{$vo.user_type}</td>
+                    <td>{$vo.user_connection_1}</td>
+                    <td>{$vo.user_connection_2}</td>
+                    <td>{$vo.user_connection_3}</td>
+                    <td>{$vo.user_address}</td>
+                    <td>{$vo.user_level}</td>
+                    <td>{$vo.user_status}</td>
+                    <td>{$vo.user_ip}</td>
+                    <td>{$vo.user_recent_loginTime}</td>
+                    <td>
+            
+                        <button><a href="delete?user_id={$vo.user_id}" data-title="售后" href="javascript:void(0)">删除</a></button>
+                    </td>
+                </tr>
+                {/volist}
+
+            </tbody>
+        </table>
+        <div align="center">{$page}</div>
+    </div>
+
+    <script src="__STATIC__/index/js/jquery.js"></script>
+    <script src="__STATIC__/index/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap 实例 - 输入框组的按钮插件</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="__ROOT__/static/js/jquery-3.3.1.js"></script>
+    <script src="__ROOT__/static/layer/layer.js"></script>
+</head>
+
+<script>
+
+        function createForm() {
+
+            var selectType = document.getElementById("type");
+            var index = selectType.selectedIndex;
+            var valuetype = selectType.options[index].value;
+
+            var content = document.getElementById('content').value;
+
+            var saleID = document.getElementById('saleID').value;
+
+            layer.open({
+                type: 2,
+                title: '修改订单',
+                maxmin: true,
+                shadeClose: true, //点击遮罩关闭层
+                area: ['600px', '450px'],
+                content: "http://localhost/tp6/public/afterSale/AfterSale/creatForm?type=" + valuetype + "&content=" + content
+                    + "&saleID=" + saleID 
+            });
+            
+
+        }
+
+    
+
+</script>
+
+<body>
+
+    <div style="padding: 100px 100px 10px;">
+        <div class="form-group">
+            <label for="name">订单编号</label>
+            <input type="text" class="form-control" placeholder="ODYYYYMMXXXXX" name="saleID" id="saleID">
+        </div>
+
+        <label for="name">问题分类</label>
+        <select id="type" class="form-control" name="type">
+            <option>退货</option>
+            <option>换货</option>
+            <option>维修</option>
+            <option>咨询</option>
+        </select>
+
+        <div class="form-group">
+            <label for="name">问题详情</label>
+            <textarea class="form-control" rows="3" name="content" id="content"></textarea>
+        </div>
+
+        <button class="btn btn-primary btn-lg" type="button" data-toggle="modal" data-target="#myModal" onclick="createForm()">
+            提交
+        </button>
+    </div>
+
+</body>
+
+</html>

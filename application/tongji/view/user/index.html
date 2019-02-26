@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"  href="../../../public/static/bs/css/bootstrap.min.css">
+        <!-- <script src="../../../public/static/bs/js/jquery.min.js"></script> -->
+         <script src="../../../public/static/bs/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        
+
+        <div class="container">
+        <!-- 	<?php
+
+        	var_dump($data);
+
+
+        	?> -->
+
+        	<div class="panel panel-primary">
+        		<div class="panel-heading">
+        			<button class="btn btn-success">用户展示页面</button>
+        			<a href="/index/User/create" class="btn btn-danger">添加用户</a>
+        			<a href="/index/User" class="btn btn-danger">查看用户</a>
+        		</div>
+        		<div class="panel-body">
+        			<table class="table table-bordered table-hover">
+        				<th>ID</th>
+        				<th>NAME</th>
+        				<th>PASS</th>
+        				<th>修改</th>
+        				<th>删除</th>
+                        {volist name="data" id="value"}
+        				<tr>
+        					<td>{$value.id}</td>
+        					<td>{$value.name}</td>
+        					<td>{$value.pass}</td>
+        					<td><a href="">修改</a></td>
+        					<td><a href="">删除</a></td>
+
+        				</tr>
+        				{/volist}
+        			</table>
+        		</div>
+        	</div>
+        	
+        </div>
+    </body>
+</html>

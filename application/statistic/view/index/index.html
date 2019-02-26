@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <style>
+        a{
+            text-decoration: none;
+        }
+        table,tr,th,td{
+            border-color: #eeeeee;
+        }
+        table{
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        th{
+            font-size: 14px;
+        }
+        th a{
+            line-height: 24px;
+        }
+        td{
+            font-size: 12px;
+            line-height: 20px;
+        }
+        
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .container a{
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            padding: 0 20px;
+            line-height: 30px;
+            background-color: #999999;
+        }
+        .header{
+            background-color: #999;
+        }
+        .header .container{
+            font-size: 18px;
+            line-height: 40px;
+            text-align: left;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="header">
+        <div class="container">
+            hahaha
+        </div>
+    </div> -->
+
+
+
+
+
+
+    <p id="id1"></p>
+    <table border="1" cellspacing="0" class="table ">
+        <thead>
+            <tr>
+                <th colspan="2"><a href="{:url('by_or_id')}"> or_id</a></td>
+                <th><a href="{:url('by_or_pro_id')}"> or_pro_id</a></td>
+                <th><a href="{:url('by_or_user_id')}"> or_user_id</a></td>
+                <th><a href="{:url('by_or_wk_id')}"> or_wk_id</a></td>
+                <th colspan="2"><a href="{:url('by_or_buy_time')}"> or_buy_time</a></td>
+                <th><a href="{:url('by_or_number')}"> or_number</a></td>
+                <th><a href="{:url('by_or_price')}"> or_price</a></td>
+                <th><a href="{:url('by_count')}"> count</a></td>
+
+
+
+
+            </tr>
+        </thead>
+
+
+        <tbody>
+            {volist name="select" id="select"}
+
+            <tr>
+
+
+                <td colspan="2" class="table1">{$select.or_id}</td>
+                <td class="table1">{$select.or_pro_id}</td>
+                <td class="table1">{$select.or_user_id}</td>
+                <td class="table1">{$select.or_wk_id}</td>
+                <td colspan="2" class="table1">{$select.or_buy_time}</td>
+                <td class="table1">{$select.or_number}</td>
+                <td class="table1">{$select.or_price}</td>
+                <td class="table1">{$select.or_price}*{$select.or_number}</td>
+            </tr>{/volist}
+        </tbody>
+
+
+
+
+
+    </table>
+
+    </form>
+
+    <table>
+        <tr>
+            <td>
+                <form action="{:url('bt_time')} " method="POST">
+                    <input type="text" name="table1" id="table1" class="table1">
+                    <input type="text" name="table2" id="table2" class="table2">
+                    <button type="submit">by_time</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="{:url('bt_or_id')} " method="POST">
+                    <input type="text" name="table1" id="table1" class="table1">
+                    <input type="text" name="table2" id="table2" class="table2">
+                    <button type="submit">by_or_id</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="{:url('count_sum')} " method="POST">
+                    <input type="text" name="table1" id="table1" class="table1">
+                    <input type="text" name="table2" id="table2" class="table2">
+                    <button type="submit">count</button>
+                </form>
+            </td>
+        </tr>
+
+
+    </table>
+
+    <!-- <form action="{:url('by_count')} " method="POST" >
+        <input type="text" name="table1" id="table1" class="table1">
+        <input type="text" name="table2" id="table2" class="table2">
+        <button type="submit">submit</button>
+    </form> -->
+    <div class="container">
+        <a href="{:url('to_productions')}">go and see the productions</a>
+        <a href="{:url('/tongji/Index')}">go and see the chart</a>
+    </div>
+    
+
+</body>
+
+</html>
